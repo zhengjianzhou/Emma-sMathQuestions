@@ -3,13 +3,13 @@
 import random,sys
 
 while True:
-    # line_raw = 'meet+meet+meet+meet=team'
+    # Sample: 'meet+meet+meet+meet=team'
     line = raw_input("What is your question?\n").replace(' ','')
     print 'Got : ', line
     s = set(line.replace('+','').replace('=',''))
     l_0, l_1 = line.split('=')
     xx, y = [x for x in l_0.split('+')], list(l_1)
-    print xx,y
+
     while True:
         sd = {a:b for a,b in zip(s,random.sample(range(10), len(s)))}
         
